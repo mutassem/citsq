@@ -1,6 +1,7 @@
 // 1. Import utilities from `astro:content`
 import { z, defineCollection } from 'astro:content';
 import { cldAssetsLoader } from 'astro-cloudinary/loaders';
+experimental: { contentLayer: true }
 // 2. Define your collection(s)
 const blogCollection = defineCollection({
   schema: z.object({
