@@ -1,0 +1,21 @@
+---
+
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+import { getCollection } from 'astro:content';
+const assets = await getCollection('assets');
+console.log('assets', assets);
+
+---
+
+<Layout title="الصالة">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"أعضاء   الجمعية</Fragment>
+       </Fragment>
+    </Sectionhead>
+   
+  </Container>
+</Layout>

@@ -1,0 +1,25 @@
+---
+import Navbar from "../components/navbar/navbar.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import '@fontsource-variable/noto-kufi-arabic';
+import Header from "../components/Header.astro";
+---
+
+<!doctype html>
+<html lang="en" dir="auto">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
+		<meta name="generator" content={Astro.generator} />
+		<title>جمعية البر -قطنا</title>
+	</head>
+	<body class="min-h-screen grid grid-rows-[auto,1fr,auto] bg-transparent bg-gray-100 ">
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+

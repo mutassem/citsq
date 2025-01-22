@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+import { CldImage } from 'astro-cloudinary';
+---
+
+<Layout title="الأعضاء">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"أعضاء مجلس الجمعية</Fragment>
+       </Fragment>
+    </Sectionhead>
+    <CldImage
+    src="https://res.cloudinary.com/dfklzkzss/image/upload/v1737457043/IMG_20250116_122147_r6entk.jpg"
+    width="500"
+    height="600"
+    alt="none"
+    sizes="100vw" // Optional
+  />
+  </Container>
+</Layout>

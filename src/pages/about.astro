@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="حول الجمعية">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">عن الجمعية</Fragment>
+      <Fragment slot="desc">جمعية البر والتعليم الإسلامي في قطنا.</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        تأسست الجمعية عام 1963 وهي اليوم تضم مستوصف وروضة أطفال وتقدم خدماتها لكل المحتاجين في منطقة قطنا
+      </p>
+    </div>
+    
+    </div>
+  </Container>
+</Layout>
