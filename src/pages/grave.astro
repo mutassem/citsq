@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="المقبرة">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"المقبرة</Fragment>
+      <Fragment slot="desc">جمعية البر والتعليم الإسلامي في قطنا.</Fragment>
+    </Sectionhead>
+    
+     
+  </Container>
+  <div class="grid md:grid-cols-2 items-center md:gap-4 gap-8 font-[sans-serif] max-w-5xl max-md:max-w-md mx-auto">
+    <div class="max-md:order-1 max-md:text-center">
+      <h3 class="text-gray-800 md:text-5xl text-2xl md:leading-10 items-center">المقبرة</h3>
+      <p class="mt-4  text-3xl text-gray-600">تقوم الجمعية بمتابعة كافة الأنشطة المتعلق بالمقبرة وخاصة مقبرة دار السلام من حيث الإشراف على تجهيز وحفر القبور والشواهد . وهي أنشطة غير ربحية تهدف لتقديم الخدمات بسعر التكلفة</p>
+      
+    </div>
+    <div class="md:h-[470px]">
+      <img src="https://res.cloudinary.com/dfklzkzss/image/upload/v1737735155/cem_fh3bth.jpg" class="w-full h-full md:object-contain" />
+    </div>
+  </div>
+  <br />
+  <br />
+</Layout>

@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="المقبرة">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"الجمعية الأم</Fragment>
+      <Fragment slot="desc">جمعية البر والتعليم الإسلامي في قطنا.</Fragment>
+    </Sectionhead>
+    
+     
+  </Container>
+  <div class="grid md:grid-cols-2 items-center md:gap-4 gap-8 font-[sans-serif] max-w-5xl max-md:max-w-md mx-auto">
+    <div class="max-md:order-1 max-md:text-center">
+      <h3 class="text-gray-800 md:text-5xl text-2xl md:leading-10 items-center">الجمعية الأم</h3>
+      <p class="mt-4  text-3xl text-gray-600">تقوم الجمعية بتقدم كافة الخدمات والرعاية للأيتام والأرامل والمطلقات وذوي الإحتياجات الخاصة واصحاب الأمراض المزمنة وكبار السن والعجزة</p>
+      
+    </div>
+    <div class="md:h-[470px]">
+      
+    </div>
+  </div>
+  <br />
+  <br />
+</Layout>
