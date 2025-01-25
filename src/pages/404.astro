@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="المقبرة">
+    
+  <Container>
+    <br />
+    <br />
+    <h1 class="text-7xl">عذرا هذه الصفحة غير موجودة</h1>
+    <Sectionhead>
+      <Fragment slot="title"الجمعية الأم</Fragment>
+      <Fragment slot="desc">جمعية البر والتعليم الإسلامي في قطنا.</Fragment>
+    </Sectionhead>
+    
+     
+  </Container>
+   
