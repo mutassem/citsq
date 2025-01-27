@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
 import { getCollection } from 'astro:content';
+import '@fontsource-variable/kufam'
 const assets = await getCollection('assets');
 console.log('assets', assets);
 
@@ -14,7 +15,10 @@ console.log('assets', assets);
   <Container>
     <Sectionhead>
       <Fragment slot="title" الصالة    </Fragment>
-        <h1 class="text-5xl font-arabic">صالة الجمعية</h1>
+        <div class="font-changa">
+        <h1 class="text-5xl  ">صالة الجمعية</h1>
+      </div>
+        <br />
         <p class="text-2xl">توفر الجمعية صالة كبيرة لكافة مناسبات العزاء والمحاضرات وغيرها من النشاطات والفعاليات بأسعار رمزية وهي مجهزة بتدفئة وتكييف</p>
        </Fragment>
     </Sectionhead>
@@ -46,3 +50,13 @@ console.log('assets', assets);
     </div>
   </div>
 </Layout>
+<style>
+  @font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff2) format('woff2'), url(@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+</style>

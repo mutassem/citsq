@@ -4,7 +4,7 @@ import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
-
+import { ViewTransitions } from "astro:transitions";
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
@@ -21,6 +21,79 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
      
   </Container>
    <h1 class="text-7xl">قيد الإنشاء </h1>
+ 
+ 
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <div id="my-gallery" class="grid grid-cols-1 py-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <a href="https://res.cloudinary.com/dfklzkzss/image/upload/v1737456745/IMG_20250116_122501_qlmivj.jpg" data-pswp-width="800" data-pswp-height="1200" class="contents">
+        <img
+          width="250"
+          height="300"
+          loading="lazy"
+          decoding="async"
+          src="https://res.cloudinary.com/dfklzkzss/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1737456745/IMG_20250116_122501_qlmivj.jpg0"
+          class="absolute h-[250px] w-[300px] object-cover shadow"
+        />
+      </a>
+      <a href="https://res.cloudinary.com/dfklzkzss/image/upload/v1737456786/IMG_20250116_122507_wibwoy.jpg" data-pswp-width="800" data-pswp-height="1200" class="contents">
+        <img
+          width="250"
+          height="300"
+          loading="lazy"
+          decoding="async"
+          src="https://res.cloudinary.com/dfklzkzss/image/upload/v1737456786/IMG_20250116_122507_wibwoy.jpg"
+          class="absolute h-[250px] w-[300px] object-cover shadow"
+        />
+      </a>
+      <a href="https://res.cloudinary.com/dfklzkzss/image/upload/v1737456524/IMG_20250116_122458_scfwfi.jpg" data-pswp-width="800" data-pswp-height="1200" class="contents">
+        <img
+          width="250"
+          height="300"
+          loading="lazy"
+          decoding="async"
+          src="https://res.cloudinary.com/dfklzkzss/image/upload/v1737456524/IMG_20250116_122458_scfwfi.jpg"
+          class="absolute h-[250px] w-[300px] object-cover shadow"
+        />
+      </a>
+      <a href="https://res.cloudinary.com/dfklzkzss/image/upload/v1737456831/IMG_20250116_122517_xkcqsj.jpg" data-pswp-width="800" data-pswp-height="1200" class="contents">
+        <img
+          width="250"
+          height="300"
+          loading="lazy"
+          decoding="async"
+          src="https://res.cloudinary.com/dfklzkzss/image/upload/v1737456831/IMG_20250116_122517_xkcqsj.jpg"
+          class="absolute h-[250px] w-[300px] object-cover shadow"
+        />
+      </a>
+    </div>
+    <script>
+      import 'photoswipe/style.css'
+      import pswpModule from 'photoswipe'
+      import PhotoSwipeLightbox from 'photoswipe/lightbox'
+
+      const lightbox = new PhotoSwipeLightbox({
+        pswpModule,
+        children: 'a',
+        gallery: '#my-gallery',
+      })
+
+      document.addEventListener(
+        'astro:page-load',
+        () => { if (lightbox) lightbox.init() },
+        { once: false },
+      )
+    </script>
+  </body>
+</html>
   <br />
   <br />
 </Layout>

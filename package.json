@@ -9,14 +9,28 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.1.6",
     "@astrojs/tailwind": "^5.1.4",
+    "@fontsource-variable/cabin": "^5.1.1",
+    "@fontsource-variable/changa": "^5.1.1",
+    "@fontsource-variable/kufam": "^5.1.1",
     "@fontsource-variable/noto-kufi-arabic": "^5.1.1",
+    "@fontsource-variable/rubik": "^5.1.1",
     "@fontsource/cabin": "^5.1.1",
     "@fontsource/ibm-plex-sans-arabic": "^5.1.1",
+    "@material-tailwind/react": "^2.1.10",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "astro": "^4.7",
     "astro-cloudinary": "^1.3.0",
     "astro-navbar": "^2.3.9",
     "cloudinary": "^2.5.0",
+    "photoswipe": "^5.4.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/photoswipe": "^4.1.6"
   }
 }
