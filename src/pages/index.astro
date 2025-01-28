@@ -22,19 +22,19 @@ console.log('assets', assets);
 			  <p class="text-zinc-900 text-2xl text-center lg:text-[2rem] mb-24 break-words line-clamp-3 lg:line-clamp-none max-sm:mb-14">تأسست عام 1382 ه - 1963 م</p> </p>
 			  <div class="mt-8 flex max-sm:flex-col sm:space-x-4 max-sm:space-y-6">
 				<a href="/about" class="px-6 py-3 text-base font-semibold text-white bg-[#f032e6] rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-[#f032e6] focus:outline-none focus:ring-opacity-50">عن الجمعية</a>
-				<a href="javascript:void(0);" class="px-6 py-3 text-base font-semibold text-[#f032e6] border border-[#f032e6] rounded-full hover:text-white hover:bg-[#f032e6] transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-[#f032e6] focus:outline-none focus:ring-opacity-50">إدعمنا</a>
+				<a href="#donate" class="px-6 py-3 text-base font-semibold text-[#f032e6] border border-[#f032e6] rounded-full hover:text-white hover:bg-[#f032e6] transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-[#f032e6] focus:outline-none focus:ring-opacity-50">إدعمنا</a>
 			  </div>
 			</div>
 			<div class="md:h-[450px]">
 			  <img src="/ch.png" class="w-full h-full object-cover rounded-lg shadow-xl" alt="Dining Experience" />
 			</div>
 		  </div>
-		  <div class="px-4 sm:px-10 bg-cyan-100">
+		<!--  <div class="px-4 sm:px-10 bg-cyan-100">
 		  <div class="max-w-6xl mx-auto font-[sans-serif]">
 			<div class="px-4 sm:px-10">
 				<div class="mt-32 max-w-7xl mx-auto">
 				  <div class="mb-16 max-w-2xl text-center mx-auto">
-					<h2 class="font-mono md:sans-serif md:text-4xl text-5xl md:leading-10 font-extrabold lg:text-[3rem] lg:leading-[5rem] text-gray-800 mb-4">قيم الجمعية</h2>
+					<h2 class="font-mono md:sans-serif md:text-4xl text-5xl md:leading-10 font-extrabold lg:text-[3rem] lg:leading-[5rem] text-gray-800 mb-4">أهداف الجمعية</h2>
 					 
 				  </div>
 				  <div class="grid lg:grid-cols-3 md:grid-cols-2 max-md:max-w-lg mx-auto gap-8">
@@ -48,8 +48,8 @@ console.log('assets', assets);
 						  data-original="#000000" />
 					  </svg>
 					  <div>
-						<h3 class="text-3xl font-koufi mb-2 font-bold">الأمانة</h3>
-						<p> نؤكد على مبدأ الصدق والامانة بيننا وبين شركائنا وبين المستفيدين من مؤسستنا.</p>
+						<h3 class="text-2xl font-koufi mb-2 font-bold"> دعم الفئات الأكثر إحتياجا مادياً ومعنويا</h3>
+						 
 					  </div>
 					</div>
 					<div class="sm:p-6 p-4 flex bg-white rounded-md border">
@@ -69,8 +69,8 @@ console.log('assets', assets);
 						</g>
 					  </svg>
 					  <div>
-						<h3 class="text-3xl font-koufi mb-2 font-bold">الدقة</h3>
-						<p>نؤكد على مبدأ الصدق والامانة بيننا وبين شركائنا وبين المستفيدين من مؤسستنا .</p>
+						<h3 class="text-3xl font-koufi mb-2 font-bold">توفير الرعاية</h3>
+						<p></p>  
 					  </div>
 					</div>
 					<div class="sm:p-6 p-4 flex bg-white rounded-md border">
@@ -88,9 +88,274 @@ console.log('assets', assets);
 					 
 				  </div>
 				  </div>
-
+				-->
 				  
-						 
+	 	<br/>	
+				  
+		 <style>
+			.carousel-container {
+				perspective: 1000px;
+				touch-action: pan-y pinch-zoom;
+			}
+	
+			.carousel-track {
+				transform-style: preserve-3d;
+				transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+			}
+	
+			.carousel-item {
+				backface-visibility: hidden;
+				transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+			}
+	
+			.carousel-item.active {
+				opacity: 1;
+				transform: scale(1) translateZ(0);
+			}
+	
+			@media (max-width: 640px) {
+				.carousel-item.prev {
+					opacity: 0;
+					transform: scale(0.8) translateX(-50%) translateZ(-100px);
+				}
+	
+				.carousel-item.next {
+					opacity: 0;
+					transform: scale(0.8) translateX(50%) translateZ(-100px);
+				}
+			}
+	
+			@media (min-width: 641px) {
+				.carousel-item.prev {
+					opacity: 0.7;
+					transform: scale(0.9) translateX(-100%) translateZ(-100px);
+				}
+	
+				.carousel-item.next {
+					opacity: 0.7;
+					transform: scale(0.9) translateX(100%) translateZ(-100px);
+				}
+			}
+	
+			.carousel-item.hidden {
+				opacity: 0;
+				transform: scale(0.8) translateZ(-200px);
+			}
+	
+			.nav-button {
+				transition: all 0.3s;
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(8px);
+				-webkit-backdrop-filter: blur(8px);
+			}
+	
+			@media (hover: hover) {
+				.nav-button:hover {
+					background: rgba(255, 255, 255, 0.2);
+					transform: scale(1.1);
+				}
+			}
+	
+			.nav-button:active {
+				transform: scale(0.95);
+			}
+	
+			.progress-bar {
+				transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+			}
+		</style>
+	</head>
+	<body class="bg-black min-h-screen flex items-center justify-center overflow-hidden p-4 sm:p-8">
+		<!-- Background effects -->
+		<div class="fixed inset-0 -z-10">
+			<div class="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-purple-900/20 to-fuchsia-900/20"></div>
+			<div class="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-violet-500/10 rounded-full filter blur-3xl"></div>
+			<div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-fuchsia-500/10 rounded-full filter blur-3xl"></div>
+		</div>
+	
+		<!-- Main container -->
+		<div class="w-full max-w-6xl mx-auto">
+			<!-- Carousel container -->
+			<div class="carousel-container relative">
+				<!-- Progress bar -->
+				<div class="absolute top-0 left-0 right-0 h-1 bg-white/10 rounded-full overflow-hidden z-20">
+					<div class="progress-bar absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+				</div>
+	
+				<!-- Navigation buttons -->
+				<button class="nav-button absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation" onclick="prevSlide()" title="Previous slide">
+					<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+					</svg>
+				</button>
+				
+				<button class="nav-button absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation" onclick="nextSlide()" title="Next slide">
+					<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
+	
+				<!-- Carousel track -->
+				<div class="carousel-track relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
+					<!-- Carousel items -->
+					<div class="carousel-item active absolute top-0 left-0 w-full h-full">
+						<div class="w-full h-full p-4 sm:p-8">
+							<div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+								<img src="https://res.cloudinary.com/dfklzkzss/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1737456550/IMG_20250116_123041_sakq3j.jpg" />
+								<div class="absolute inset-0 bg-gradient-to-br from-violet-500/40 to-purple-500/40 mix-blend-overlay"></div>
+								<div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+									<h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3"> </h3>
+									<p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl"> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div class="carousel-item next absolute top-0 left-0 w-full h-full">
+						<div class="w-full h-full p-4 sm:p-8">
+							<div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+								<img src="https://res.cloudinary.com/dfklzkzss/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1737456329/IMG_20250116_122425_yrc2lz.jpg" alt=" " class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+								<div class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/40 to-pink-500/40 mix-blend-overlay"></div>
+								<div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+									<h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3"> </h3>
+									<p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl"> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div class="carousel-item hidden absolute top-0 left-0 w-full h-full">
+						<div class="w-full h-full p-4 sm:p-8">
+							<div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+								<img src="https://res.cloudinary.com/dfklzkzss/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1737455873/IMG_20250116_122303_rawiff.jpg" alt=" " class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+								<div class="absolute inset-0 bg-gradient-to-br from-pink-500/40 to-rose-500/40 mix-blend-overlay"></div>
+								<div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+									<h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3"> </h3>
+									<p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl"> .</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				 
+		  </div>
+	
+				<!-- Indicators -->
+				<div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2 z-20">
+					<button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors" title="Go to slide 1"></button>
+					<button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors" title="Go to slide 2"></button>
+					<button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors" title="Go to slide 3"></button>
+				</div>
+			</div>
+		</div>
+	
+		<script>
+			let currentSlide = 0;
+			const slides = document.querySelectorAll('.carousel-item');
+			const indicators = document.querySelectorAll('.bottom-2 button, .bottom-4 button');
+			const progressBar = document.querySelector('.progress-bar');
+			let autoAdvanceTimer;
+			let touchStartX = 0;
+			let touchEndX = 0;
+			const carousel = document.querySelector('.carousel-track');
+	
+			// Add touch events for swipe
+			carousel.addEventListener('touchstart', e => {
+				touchStartX = e.changedTouches[0].screenX;
+			}, { passive: true });
+	
+			carousel.addEventListener('touchend', e => {
+				touchEndX = e.changedTouches[0].screenX;
+				handleSwipe();
+			}, { passive: true });
+	
+			function handleSwipe() {
+				const swipeThreshold = 50;
+				const diff = touchStartX - touchEndX;
+	
+				if (Math.abs(diff) > swipeThreshold) {
+					if (diff > 0) {
+						nextSlide();
+					} else {
+						prevSlide();
+					}
+				}
+			}
+	
+			function updateSlides() {
+				slides.forEach((slide, index) => {
+					slide.className = 'carousel-item absolute top-0 left-0 w-full h-full';
+					if (index === currentSlide) {
+						slide.classList.add('active');
+					} else if (index === (currentSlide + 1) % slides.length) {
+						slide.classList.add('next');
+					} else if (index === (currentSlide - 1 + slides.length) % slides.length) {
+						slide.classList.add('prev');
+					} else {
+						slide.classList.add('hidden');
+					}
+				});
+	
+				// Update indicators
+				indicators.forEach((indicator, index) => {
+					indicator.className = `w-8 sm:w-12 h-1 sm:h-1.5 rounded-full transition-colors ${
+						index === currentSlide ? 'bg-white/40' : 'bg-white/20'
+					} hover:bg-white/60`;
+				});
+	
+				// Update progress bar
+				progressBar.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
+			}
+	
+			function resetAutoAdvance() {
+				clearInterval(autoAdvanceTimer);
+				autoAdvanceTimer = setInterval(nextSlide, 5000);
+			}
+	
+			function nextSlide() {
+				currentSlide = (currentSlide + 1) % slides.length;
+				updateSlides();
+				resetAutoAdvance();
+			}
+	
+			function prevSlide() {
+				currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+				updateSlides();
+				resetAutoAdvance();
+			}
+	
+			// Add click handlers to indicators
+			indicators.forEach((indicator, index) => {
+				indicator.addEventListener('click', () => {
+					currentSlide = index;
+					updateSlides();
+					resetAutoAdvance();
+				});
+			});
+	
+			// Initialize auto advance
+			resetAutoAdvance();
+	
+			// Initialize slides
+			updateSlides();
+		</script>
+		<div id="donate" class="font-sans bg-gray-100 px-4 py-12">
+			<div class="grid lg:grid-cols-2 gap-12 lg:max-w-6xl max-w-2xl mx-auto">
+			  <div class="text-left">
+				<h2 class="text-gray-800 text-5xl text-justify font-serif font-bold mb-6">تبرع للجمعية</h2>
+				<p class="mb-4 text-right text-gray-500">يمكنك التبرع ودعم الجمعية ومساعدتها لإستكمال رسالتها بدعم المحتاجين  عبر تقديم الدعم المالي والعيني سواء بتبرع مباشر بزيارة مقر الجمعية أو عبر حساب الجمعية البنكي أدناه.</p>
+				 </div>
+			  <div>
+				<img src="/don.png" alt="Placeholder Image" class="rounded-lg    " />
+			  </div>
+			</div>
+		  </div>
+	</body>
+	</html>
+	
 	</main>
+	
+	<br />
+
 	
 </Layout>
